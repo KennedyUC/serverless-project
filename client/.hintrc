@@ -1,0 +1,25 @@
+{
+    "connector": {
+        "name": "@hint/connector-local",
+        "options": {
+            "pattern": ["**", "!.git/**"],
+            "watch": false
+        }
+    },
+    "extends": ["development"],
+    "formatters": [
+        "summary",
+        "html"
+    ],
+    "hints": {
+        "compat-api/css": ["error", {
+            "ignore": [
+                "-ms-text-size-adjust",
+                "-webkit-text-size-adjust",
+                "-webkit-overflow-scrolling",
+                "-webkit-tap-highlight-color",
+                "-webkit-text-decoration-skip"
+            ]
+        }]
+    }
+}
